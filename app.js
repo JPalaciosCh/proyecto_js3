@@ -7,13 +7,7 @@ const app = express();
 app.use(bodyParser.json()); // Para application/json
 app.use(bodyParser.urlencoded({ extended: true })); // Para application/x-www-form-urlencoded
 
-const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
-const bodyParser = require('body-parser');
-
-const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 // Conexión a la base de datos
 let db = new sqlite3.Database('./students.sqlite', (err) => {
