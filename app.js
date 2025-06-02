@@ -1,4 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+
+// Configura body-parser correctamente
+app.use(bodyParser.json()); // Para application/json
+app.use(bodyParser.urlencoded({ extended: true })); // Para application/x-www-form-urlencoded
+
+const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
 
